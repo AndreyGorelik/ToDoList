@@ -1,0 +1,17 @@
+.task {
+    display: flex;
+}
+
+.task a {
+    text-decoration: none;
+    color: black;
+}
+
+.tasks-list {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 15px;
+}

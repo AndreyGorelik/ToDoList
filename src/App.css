@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Mulish", sans-serif;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+  display: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  padding: 0;
+  border: none;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+body {
+  max-width: 1920px;
+  font-family: "Muli", sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  margin: 30px 0;
+}
+
+body {
+  max-width: 780px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  flex-wrap: wrap;
+  padding: 10px 30px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.foot {
+  width: 100%;
+  margin-top:auto;
+}
+
+.spinner {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+textarea.description-text {
+  width: 100%;
+}
+
+.task-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-edit {
+  display: flex;
+  gap: 10px;
+}
+
+.done-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.done-checkbox + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.done-checkbox + label::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 100%;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.done-checkbox:not(:disabled):not(:checked) + label:hover::before {
+  border-color: #276127;
+}
+
+.done-checkbox:not(:disabled):active + label::before {
+  background-color: #7ccc7c;
+}
+
+.done-checkbox:focus + label::before {
+  box-shadow: 0 0 0 0.2rem rgba(81, 116, 15, 0.185);
+}
+
+.done-checkbox:focus:not(:checked) + label::before {
+  border-color: #276127;
+}
+
+.done-checkbox:checked + label::before {
+  background-color: #50a650;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+.done-checkbox:disabled + label::before {
+  background-color: #e9ecef;
+}
+
+.checkbox {
+  margin-bottom: 1em;
+}
+
+.edit-mode {
+  width: 100px!important;
+}
+
+.edit-description {
+  min-height: 300px;
+}
+
+.edit-area {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+textarea.edit-title {
+  flex: 0 0 100%;
+}
+
+textarea.edit-description {
+  flex: 0 0 100%;
+}
+
+html[data-theme="dark"] h1{
+  color: #fff;
+}
+
+html[data-theme="dark"] h2{
+  color: #fff;
+}
+
+html[data-theme="dark"] body {
+  background-color: rgb(34 34 34);
+}
+
+html[data-theme="dark"] a .btn-stand {
+  background-color: #626262;
+}
+
+html[data-theme="dark"] .btn-stand {
+  background-color: #626262;
+}
+
+html[data-theme="dark"] a {
+  color: white;
+}
+
+html[data-theme="dark"] .arrow {
+  border: solid white;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 5px;
+}
+
+html[data-theme="dark"] textarea {
+  flex: 0 0 100%;
+  background-color: #242424;
+  padding: 10px;
+  color: white;
+}
+
+html[data-theme="dark"] .done {
+  background-color: #6c6f67;
+}
+
+html[data-theme="dark"] .undone {
+  background-color: #eceeea;
+}
+
+html[data-theme="dark"] .wrapper {
+  color:white;
+}
+
+html[data-theme="dark"] .done-checkbox:checked + label::before {
+  background-color: gray;
+}
+
+html[data-theme="dark"] .active {
+  border: 2px solid #525252;
+}
+
+html[data-theme="dark"] input {
+  background-color: #242424;
+  color: white;
+}
+
