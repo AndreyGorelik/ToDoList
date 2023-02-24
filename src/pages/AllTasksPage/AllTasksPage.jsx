@@ -4,7 +4,7 @@ import TaskList from "../../components/taskList/TaskList";
 import StatusBar from "../../components/statusBar/StatusBar";
 import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
-import { constans } from "../../constans/constans";
+import { constants } from "../../constants/constants";
 const AllTasksPage = () => {
   const [month, setMonth] = useState(0);
 
@@ -22,15 +22,15 @@ const AllTasksPage = () => {
     containerRef.current?.scrollBy({ left: distance, behavior: "smooth" });
   };
 
-  const scrollContainerScroll = () => {
-    const { scrollLeft, scrollWidth, clientWidth } = containerRef?.current;
+  // const scrollContainerScroll = () => {
+  //   const { scrollLeft, scrollWidth, clientWidth } = containerRef?.current;
 
-    if (Math.round(scrollLeft + clientWidth) >= scrollWidth) {
-      if (month <= 5) {
-        setMonth(month + 1);
-      }
-    }
-  };
+  //   if (Math.round(scrollLeft + clientWidth) >= scrollWidth) {
+  //     if (month <= 5) {
+  //       setMonth(month + 1);
+  //     }
+  //   }
+  // };
 
   return (
     <>
@@ -44,9 +44,9 @@ const AllTasksPage = () => {
           <div
             className="calendar-dot"
             ref={containerRef}
-            onScroll={scrollContainerScroll}
+            // onScroll={scrollContainerScroll}
           >
-            <Calendar nextMonthPlus={month} />
+            <Calendar additionalMonth={month} />
             <StatusBar />
           </div>
           <button
@@ -59,7 +59,7 @@ const AllTasksPage = () => {
       </div>
       <div className="foot">
         <Link to="/add">
-          <button className="btn-stand mt-30">{constans.addNewTask}</button>
+          <button className="btn-stand mt-30">{constants.addNewTask}</button>
         </Link>
       </div>
     </>

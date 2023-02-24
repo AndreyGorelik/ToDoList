@@ -9,7 +9,7 @@ import useAuth from '../../hooks/auth.hook';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { getDatabase, ref, set, child, get } from "firebase/database";
-import { constans } from '../../constans/constans';
+import { constants } from '../../constants/constants';
 const Login = () => {
     const dispatch = useDispatch();
     const auth = getAuth();
@@ -52,12 +52,12 @@ const Login = () => {
             })
             .catch(err => {
                 dispatch(setLoadingStatus('idle'))
-                if (err.code === constans.authUserNotFound) {
-                    notifyError(constans.emailNotFound)
+                if (err.code === constants.authUserNotFound) {
+                    notifyError(constants.emailNotFound)
                 }
 
-                if (err.code === constans.authWrongPassword) {
-                    notifyError(constans.wrongPassword)
+                if (err.code === constants.authWrongPassword) {
+                    notifyError(constants.wrongPassword)
                 }
             })
     }

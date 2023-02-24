@@ -6,7 +6,6 @@ const StatusBar = () => {
     const { tasks } = useSelector(state => state.allTasks)
     const { daysCount } = useSelector(state => state.calendarSlice)
     const [statusBar, setStatusBar] = useState([])
-   
 
     useEffect(() => {
         if (tasks !== 'undefined' && tasks !== null) {

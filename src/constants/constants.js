@@ -1,4 +1,4 @@
-export const constans = {
+export const constants = {
     wentWrong: "Something went wrong. Try again later",
     emailNotFound: "User with this email not found",
     wrongPassword: "Wrong password",

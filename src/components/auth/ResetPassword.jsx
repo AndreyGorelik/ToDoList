@@ -2,7 +2,7 @@ import React from 'react'
 import { getAuth, sendPasswordResetEmail } from "firebase/auth";
 import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
-import { constans } from '../../constans/constans';
+import { constants } from '../../constants/constants';
 import 'react-toastify/dist/ReactToastify.css';
 import "./auth.css"
 const ResetPassword = () => {
@@ -17,11 +17,11 @@ const ResetPassword = () => {
 
         sendPasswordResetEmail(auth, email)
         .then(() => {
-            notifySuccess(constans.recoveryPassword)
+            notifySuccess(constants.recoveryPassword)
         })
         .catch((err) => {
-            if(err.code === constans.authUserNotFound) {
-                notifyError(constans.authUserNotFound)
+            if(err.code === constants.authUserNotFound) {
+                notifyError(constants.authUserNotFound)
             }
             
         });
@@ -31,7 +31,7 @@ const ResetPassword = () => {
         <>
         <form className="sign-form" onSubmit={authRecovery}>
             <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="email" required/>
-            <button className="btn-stand">{constans.reset}</button>
+            <button className="btn-stand">{constants.reset}</button>
         </form>
         <ToastContainer position="bottom-center"/>
         </>

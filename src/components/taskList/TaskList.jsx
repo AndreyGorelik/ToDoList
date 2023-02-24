@@ -1,5 +1,5 @@
 import "./tasklist.css";
-import { constans } from "../../constans/constans";
+import { constants } from "../../constants/constants";
 import useAuth from "../../hooks/auth.hook";
 import { ReactComponent as Spinner } from "../../assets/images/spinner.svg";
 import { Link } from "react-router-dom";
@@ -17,7 +17,7 @@ const TaskList = () => {
 
   useEffect(() => {
     dispatch(getAllTasks(userId));
-  }, []);
+  }, [dispatch, userId]);
 
   useEffect(() => {
     if (tasks?.[activeDate] !== undefined && tasks?.[activeDate] !== null) {
@@ -39,9 +39,9 @@ const TaskList = () => {
     <>
       <div className="tasks-count">
         {formattedTasks.length > 0 ? (
-          <h1>{`${formattedTasks.length} ${constans.taskPlanned}`}</h1>
+          <h1>{`${formattedTasks.length} ${constants.taskPlanned}`}</h1>
         ) : (
-          <h1>{constans.noTasks}</h1>
+          <h1>{constants.noTasks}</h1>
         )}
       </div>
       <div className="tasks-list">

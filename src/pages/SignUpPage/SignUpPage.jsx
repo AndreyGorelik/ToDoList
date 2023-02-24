@@ -1,9 +1,9 @@
 import SignUp from "../../components/auth/SignUp"
-import { constans } from "../../constans/constans"
+import { constants } from "../../constants/constants"
 const SignUpPage = () => {
   return (
     <div className='login-screen'>
-        <h1>{constans.register}</h1>
+        <h1>{constants.register}</h1>
         <SignUp/>
     </div>
   )

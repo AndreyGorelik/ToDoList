@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { setUser } from "./authSlice";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
-import { constans } from "../../constans/constans";
+import { constants } from "../../constants/constants";
 import Form from "./Form";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -29,12 +29,12 @@ const SignUp = () => {
         navigate("/login");
       })
       .catch((err) => {
-        if (err.code === constans.authEmailInuse) {
-          notifyError(constans.emailInUse);
+        if (err.code === constants.authEmailInuse) {
+          notifyError(constants.emailInUse);
         }
 
-        if (err.code === constans.authWrongEmail) {
-          notifyError(constans.wrongEmail);
+        if (err.code === constants.authWrongEmail) {
+          notifyError(constants.wrongEmail);
         }
       });
   };

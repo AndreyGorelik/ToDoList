@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchSaveTask } from "./addTaskFormSlice";
 import { useNavigate } from "react-router-dom";
 import "./addtaskform.css"
-import { constans } from "../../constans/constans";
+import { constants } from "../../constants/constants";
 
 const AddTaskForm = () => {
 
@@ -23,7 +23,7 @@ const AddTaskForm = () => {
     }
 
     if (loading === 'error') {
-        return <p>{constans.wentWrong}</p>
+        return <p>{constants.wentWrong}</p>
     }
 
     return (
@@ -31,7 +31,7 @@ const AddTaskForm = () => {
             <form onSubmit={saveTask} className='new-task-form'>
                 <textarea name="title" className="title-text" minLength={3} maxLength={100} placeholder="Title" onChange={(e) => setTitle(e.target.value)} required/>
                 <textarea name="description" className="description-text" maxLength={1000} placeholder="Description" onChange={(e) => setDescription(e.target.value)} />
-                <button type="submit" className="btn-stand">{constans.save}</button>
+                <button type="submit" className="btn-stand">{constants.save}</button>
             </form>
         </>
     )

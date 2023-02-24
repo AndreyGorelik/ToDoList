@@ -1,4 +1,4 @@
-import { constans } from "../../constans/constans";
+import { constants } from "../../constants/constants";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useState, useEffect, useRef } from "react";
@@ -117,7 +117,7 @@ const TaskPage = () => {
                 className="btn-stand edit-mode"
                 onClick={deleteTask}
               >
-                {constans.delete}
+                {constants.delete}
               </button>
             )}
             <button
@@ -133,7 +133,7 @@ const TaskPage = () => {
                 className="btn-stand edit-mode"
                 onClick={cancelChanges}
               >
-                {constans.cancel}
+                {constants.cancel}
               </button>
             ) : null}
           </div>

@@ -1,9 +1,9 @@
 import AddTaskForm from '../../components/addTaskForm/AddTaskForm';
-import { constans } from '../../constans/constans';
+import { constants } from '../../constants/constants';
 const AddTaskPage = () => {
   return (
     <div className='wrapper'>
-      <h1>{constans.addNewTask}</h1>
+      <h1>{constants.addNewTask}</h1>
       <AddTaskForm/>
     </div>
   )

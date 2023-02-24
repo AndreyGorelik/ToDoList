@@ -1,14 +1,14 @@
 import Login from '../../components/auth/Login'
 import { Link } from 'react-router-dom'
-import { constans } from '../../constans/constans'
+import { constants } from '../../constants/constants'
 const LoginPage = () => {
   return (
     <div className='login-screen'>
-      <h1>{constans.signIn}</h1>
+      <h1>{constants.signIn}</h1>
       <Login />
       <div className="login-screen__options">
-        <Link to="/signup">{constans.register}</Link>
-        <Link to="/reset">{constans.forgotPassword}</Link>
+        <Link to="/signup">{constants.register}</Link>
+        <Link to="/reset">{constants.forgotPassword}</Link>
       </div>
     </div>
   )
